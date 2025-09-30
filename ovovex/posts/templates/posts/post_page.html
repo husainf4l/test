@@ -1,0 +1,17 @@
+
+
+{% extends 'layout.html' %}
+
+{% block title %}
+{{ post.title }}
+{% endblock title %}
+
+{% block content %}
+
+    <img src="{{ post.banner.url }}" alt="Banner image for {{ post.title }}" style="max-width:100%; height:auto;">
+    <h1>{{ post.title }}</h1>
+    <p>Published on: {{ post.created_at }}</p>
+    <div>{{ post.body }}</div>
+    <a href="{% url 'posts:list' %}">Back to Posts</a>
+{% endblock content %}
+               
